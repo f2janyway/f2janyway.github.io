@@ -3,20 +3,36 @@ layout: archive
 ---
 
 {{ content }}
+<div style="display: flex;">
+{% include post_pagination.html%}
 
-<ul class="taxonomy__index">
-  {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear %}
-    <li>
-      <a href="#{{ year.name }}">
-        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+</div>
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %}
+{% assign page_date = page.date | slice:0,4 %}
 
-{% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear %}
+
+<!-- {% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+<div>
+  <h4>Yearly Archive</h4>
+ <div style="display: flex ;justify-content: space-around; flex-wrap: wrap;">
+    {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+
+    {% for year in postsInYear %}
+    {% if year.name == post_date%}
+      <span style="flex-direction: row;">
+        <a href="#{{ year.name }}">
+          <span class="taxonomy__count">{{ year.name }} ({{ year.items | size }})</span>
+        </a>
+      </span>
+      {%endif%}
+    {% endfor %}
+    </div>
+</div> -->
+
+<!-- {% for year in postsByYear %}
+{% if year.name == page_date  %}
   <section id="{{ year.name }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ page.entries_layout | default: 'list' }}">
@@ -26,4 +42,6 @@ layout: archive
     </div>
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
-{% endfor %}
+  {% endif %}
+{% endfor %} -->
+

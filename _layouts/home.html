@@ -9,11 +9,10 @@ layout: archive
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
+paginator : false
   {% assign posts = site.posts %}
 {% endif %}
-
 {% for post in posts %}
   {% include archive-single.html %}
 {% endfor %}
-
 {% include paginator.html %}
