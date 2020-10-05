@@ -7,10 +7,9 @@ layout: archive
 {% include post_pagination.html%}
 
 </div>
-{{site.disqus}}
-{% if site.disqus.shortname %}
 
-  {% include disqus.html %}
+{% if site.comments.disqus.shortname %}
+  {% include comments.html %}
 {% endif %}
 {% assign page_date = page.date | slice:0,4 %}
 

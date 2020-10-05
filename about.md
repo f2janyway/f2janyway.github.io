@@ -26,7 +26,7 @@ title: "About Me"
     - 한다 한다 해 놓고 아직도 리팩토링 안하고 있음.
     - 그래도 쓸모있는 앱
 
-5. 2019-6~9 : [국비과정 웹 프로젝트(로컬서버용)](https://github.com/yegyu/DotNet)
+5. 2019-6~9 : [국비과정 웹 프로젝트(로컬서버)](https://github.com/yegyu/DotNet)
     - 추억이 새록 새록
     - 유일한 진짜 팀프로젝트
                 
