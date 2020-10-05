@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "defaulet" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "개발을 위한 저장소"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
