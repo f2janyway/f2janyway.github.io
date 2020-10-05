@@ -5,6 +5,8 @@ main:
   
   # - title: "Dev"
   #   url: /dev/
+  - title: "Year"
+    url: /year/
   # - title: "tag"
   #   url: /tags/
   - title: "Category"
