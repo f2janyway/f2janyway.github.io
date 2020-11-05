@@ -86,15 +86,7 @@ sealed class NetworkResponse <out T:Any,out U:Any>{
     data class UnknownError(val error: Throwable?): NetworkResponse<Nothing, Nothing>()
 }
 ```
-<details>
-  <summary>Click to expand!</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
+
 <details>
 <summary>sealed class 간략 설명</summary>
 
@@ -149,7 +141,7 @@ fun eval(expr: Expr): Double = when(expr) {
 </details>
 
 <details>
-
+`
     <summary>in(반공변성), out(공변성) 간략 설명</summary>
 - in, out 은 제네릭을 사용할 때 쓰인다.
 - \<in T> 와 \<out T>는 반대 기능을 한다고 생각하자.(당연하지만)
