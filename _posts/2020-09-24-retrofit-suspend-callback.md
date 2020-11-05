@@ -87,7 +87,8 @@ sealed class NetworkResponse <out T:Any,out U:Any>{
 }
 ```
 
-<details><summary>sealed class 간략 설명</summary>
+<details>
+    <summary>sealed class 간략 설명</summary>
 
 - sealed modifier 을 이용해 클래스의 계층을 제한할 때 쓰인다.
 - enum과 유사하다.
@@ -140,8 +141,11 @@ fun eval(expr: Expr): Double = when(expr) {
 
 </details>
 
+
+
+
 <details>
-<summary>in(반공변성), out(공변성) 간략 설명</summary>
+    <summary>in(반공변성), out(공변성) 간략 설명</summary>
 
 - in, out 은 제네릭을 사용할 때 쓰인다.
 - \<in T> 와 \<out T>는 반대 기능을 한다고 생각하자.(당연하지만)
@@ -173,7 +177,7 @@ fun main(){
 </details>
 
 
-</br>
+<br>
 
 ### 3. NetworkResponseCall 클래스
 
