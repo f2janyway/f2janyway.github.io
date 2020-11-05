@@ -8,6 +8,7 @@ title: "About Me"
 # 포트폴리오(Portfolio)
 1. 2020-06 ~ : [현대오일뱅크,si 업무](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)
     - 안드로이드(클라이언트) 혼자 개발
+    - 리뷰를 보면 마음이 아픔
 
 2. 2020-9 : [새찬송가](https://play.google.com/store/apps/details?id=com.box.hymn&hl=es_NI)
     - 사용자 매우 적음
@@ -31,5 +32,16 @@ title: "About Me"
     - 유일한 진짜 팀프로젝트
                 
     
+
+
+
+
+<br>
+### Email: f2janyway@gmail.com
+
+```
+ Thou shalt love thy neighbour as thyself.
+ -Matthew 22:39
+```
 
 

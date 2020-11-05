@@ -7,7 +7,13 @@
     {% if site.footer.links %}
       {% for link in site.footer.links %}
         {% if link.label and link.url %}
+          {% if link.label == "Email"%}
+
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+          {% endif%}
+          {% if link.label != "Email"%}
           <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+          {% endif%}
         {% endif %}
       {% endfor %}
     {% endif %}
