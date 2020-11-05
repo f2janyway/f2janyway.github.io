@@ -100,9 +100,11 @@ sealed class NetworkResponse <out T:Any,out U:Any>{
 
 
 ```kotlin
+
 enum class Animal{
     CAT,DOG,BIRD
 }   
+
 ```
 위의 enum class와 아래의 sealed class는 같은 기능을 한다.
 
@@ -140,12 +142,11 @@ fun eval(expr: Expr): Double = when(expr) {
 ```
 
 </p>
-
 </details>
+
+
 <details>
-<summary>in(반공변성), out(공변성) 간략 설명</summary>
-
-
+    <summary>in(반공변성), out(공변성) 간략 설명</summary>
 <p>
 
 - in, out 은 제네릭을 사용할 때 쓰인다.
@@ -175,12 +176,11 @@ fun main(){
 }
 ```
 
-
 </p>
 </details>
 
 
-<br>
+</br>
 
 
 ### 3. NetworkResponseCall 클래스
