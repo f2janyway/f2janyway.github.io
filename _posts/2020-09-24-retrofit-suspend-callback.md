@@ -143,10 +143,6 @@ fun eval(expr: Expr): Double = when(expr) {
 
 </details>
 
-
-
-
-
 <details><summary>in(반공변성), out(공변성) 간략 설명</summary>
 
 - in, out 은 제네릭을 사용할 때 쓰인다.
