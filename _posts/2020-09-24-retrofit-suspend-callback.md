@@ -88,7 +88,8 @@ sealed class NetworkResponse <out T:Any,out U:Any>{
 ```
 
 <details>
-<summary>sealed class 간략 설명</summary>
+
+    <summary>sealed class 간략 설명</summary>
 
 - sealed modifier 을 이용해 클래스의 계층을 제한할 때 쓰인다.
 - enum과 유사하다.
@@ -96,17 +97,16 @@ sealed class NetworkResponse <out T:Any,out U:Any>{
 - 상태값(value)을 넣고 사용할 수 있다.
 - when 사용시 편하다.
 
-
 ```kotlin
-
 enum class Animal{
     CAT,DOG,BIRD
 }   
-
 ```
+
 위의 enum class와 아래의 sealed class는 같은 기능을 한다.
 
 sealed class에서 전부 object만 이용할 거면 enum을 쓰는게 kotlin개발자들의 의도이지 않을까 싶다.
+
 ```kotlin
 sealed class Animal
 object CAT:Animal()
