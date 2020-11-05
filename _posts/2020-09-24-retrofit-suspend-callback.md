@@ -88,8 +88,8 @@ sealed class NetworkResponse <out T:Any,out U:Any>{
 ```
 
 <details>
-
     <summary>sealed class 간략 설명</summary>
+<P>
 
 - sealed modifier 을 이용해 클래스의 계층을 제한할 때 쓰인다.
 - enum과 유사하다.
