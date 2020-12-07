@@ -185,6 +185,9 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
+kramdown:
+  parse_block_html: true
+  html_to_native: true
   
 highlighter: rouge
 lsi: false
