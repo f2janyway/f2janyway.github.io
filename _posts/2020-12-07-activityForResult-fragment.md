@@ -101,3 +101,7 @@ println(Integer.toBinaryString(0xffff))      1111111111111111
  - cpu의 속도를 새삼 느끼고
  - android sdk 개발자들의 레벨을 어느정도 느끼고
  - 가야할 길이 멀다는것을 느낌
+
+
+<br>
+오류 있을시 알려주시면 감사하겠습니다.

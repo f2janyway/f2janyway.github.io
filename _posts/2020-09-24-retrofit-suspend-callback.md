@@ -348,4 +348,4 @@ ___
 [github link](https://github.com/f2janyway/retrofit2_suspend_customCallAdapter_test)
 
 
-틀린 부분이 있을 경우 알려주시면 감사하겠습니다.
+오류 있을시 알려주시면 감사하겠습니다.
