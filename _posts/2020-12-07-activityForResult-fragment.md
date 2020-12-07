@@ -8,7 +8,7 @@ categories:
     - android
 tags:
     - android
-date: 2020-12-07T09:15:00Z
+date: 2020-12-07T00:15:00Z
 ---
 
 activity 에서 startActivityForResult를 할 경우는 직관적으로 해당 activity의 onActivityResult()를 바로 진입함을 알 수있다.
