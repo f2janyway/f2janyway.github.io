@@ -5,7 +5,19 @@ title: "About Me"
 ---
 안드로이드 개발자(Android Developer)이자 본래 하나님 믿는 사람
 
-# 이력(History)
+### 관심사 in dev
+- clean code
+  - 훈련! 훈련! 훈련!
+- 테스팅
+  - 훈련! 훈련! 훈련!
+  - 쉽지 않은 길이나 옳은 길이다.
+  - 포기하지 말자.
+- 안드로이드
+
+- Kotlin
+
+
+### 이력(History)
 1. 2020-06 ~ : [현대오일뱅크,si 업무](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)
     - 안드로이드(클라이언트) 혼자 개발
     - 리뷰를 보면 마음이 아픔

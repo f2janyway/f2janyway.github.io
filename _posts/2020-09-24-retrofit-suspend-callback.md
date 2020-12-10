@@ -17,7 +17,7 @@ date: 2020-09-24T12:34:00Z
 [proandroiddev(medium) 자세한 설명은 여기서](https://proandroiddev.com/create-retrofit-calladapter-for-coroutines-to-handle-response-as-states-c102440de37a){:target="_blank"}
 
 
- > git link는 맨 아래
+ > github link는 맨 아래
 
 이 글에서 NetworkResponse~.kt 파일들의 코드를 거의 저 위의 블로그에서 복붙했다고 볼 수 있다.
 
