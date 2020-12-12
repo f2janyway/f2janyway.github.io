@@ -1,0 +1,225 @@
+---
+layout: posts
+# published: false
+title: "안드로이드 Hilt 개념 설명"
+comments: true
+# pagination:
+#     enabled: true
+categories:
+    - android
+tags:
+    - android
+    - hilt
+date: 2020-12-12T01:15:00Z
+---
+
+이 글은 `Using Hilt in your Android App` 제목의 [codelab](https://codelabs.developers.google.com/codelabs/android-hilt#0){:target="_blank"}과 [android-doc](https://developer.android.com/training/dependency-injection/hilt-android#component-default){:target="_blank"}을 토대로 작성했다.
+
+### 목차
+- hilt란?
+- hilt 사용법
+  1. @HiltAndroidApp
+  2. Container(Hilt-componet)
+  3. @Inject
+  4. module(@Binds,@Provids)
+  5. Qualifier(다음글)
+  6. @EntryPoint(다음글)
+
+
+### Hilt란
+
+hilt는 안드로이드 클래스에 생명주기를 고려한 의존성 주입을 할 수 있는 라이브러리다. 또한 테스트하기 쉽고 보일러플레이트코드를 줄여준다.
+
+기존의 dagger라는 의존성 주입 라이브러리가 있었으나 dagger에서 안드로이드의 생명주기를 고려하는 의존성 주입은 없어서 따로 구현을 해야 했다.
+
+hilt는 이를 보완해 나온것이다.(hilt는 dagger을 포함하고 있다.)
+
+DI(Dependency Injection)의 필요성에 대한 설명은 [여기](https://developer.android.com/training/dependency-injection#fundamentals){:target="_blank"}에 상세히 나와있다.
+
+<br>
+
+____
+
+### 1.준비  @HiltAndroidApp
+[프로젝트 세팅](https://developer.android.com/training/dependency-injection/hilt-android#setup){:target="_blank"}
+
+이 어노테이션은 해당 애플리케이션에 Hilt 코드를 자동으로 생성할 수 있게 한다.
+
+꼭 필요한 어노테이션이다. 이후에 application-level의 컴포넌트들(activity, fragment, view...)에 hilt를 사용할 수 있게된다.
+(의존성 주입을 할 수 있다.)
+```kotlin
+@HiltAndroidApp
+class ExampleApplication : Application() { ... }
+```
+____
+<br>
+
+### Container(as hilt-component) 
+`android-doc에서 두 단어(container-(hilt)component)를 혼용해서 사용함(전부는 아님)`
+
+우리가 알고 있는 컨테이너의 개념을 생각하면 '화물 컨테이너'가 떠오른다. 무언가를 담는 공간인데 이 기본적인 개념과 같이 hilt의 container 역시 각 의존성(instance;객체)(들)을 *가지고* 또 필요한 곳에 생명주기를 고려하며 의존성 주입을 하는 기능을 가진다.
+
+(*가지고* 라는 말은 각 객체를 어떻게 만드는지 알고 있다는 의미가 포함된다.) 
+
+<br>
+
+
+**@AndroidEntryPoint([component-scope](https://developer.android.com/training/dependency-injection/hilt-android#component-scopes){:target="_blank"})**
+
+직역하면 `안드로이드-진입점`이다. 이 어노테이션이 있는 안드로이드 클래스에 hilt가 의존성 주입을 할 수 있게된다.
+
+플어 보자면
+
+이 어노테이션을 사용해 'hilt 컨테이너에 주소를 입력한다'라고 볼 수 있다. 주소(장소)를 알아야만 컨테이너가 가지고 있는것을 (특정 장소에) 주입시킬 수 있으니까.
+
+이 어노테이션은 각 안드로이드 컴포넌트들의 의존성을 고려해서 사용해야 한다.
+
+    ex) fragment에서 사용할 경우 이 fragemnt를 포함하는 activity에도 @AndroidEntryPoint를 사용해 주어야 한다.
+
+@AndroidEntryPoint는 각 안드로이드 클래스의 컴포넌트를 생성한다.
+
+    `컴포넌트`는 각 컴포넌트 안에서 해당 주소(안드로이드 클래스)에만 보낼 수 있는 객체들의 장소라고 볼 수 있다.
+
+    택배사로 비유를 하자면(물리적인 비유)
+    
+    컴포넌트(컨테이너) - 서울시 관할 물류센터
+    객체(의존성)      - 물류들 
+
+    생명주기까지 접목시켜 보자면 
+    '해당 범위(scope;아래서 설명)에서 할일이 끝났다.'는 해당 지역구에 발송 물류가 없다면 그 컴포넌트의 역할은 끝난것이다.(휴가랄까...)
+    (액티비티가 onDestroy됐다거나 등등)
+
+
+
+Hilt의 예외사항
+- only 액티비티중 ComponentActivity(AppCompatActivity같이)를 상속하는 액티비티만 지원한다.
+- only 프래그먼트중 androidx의 프래그먼트를 상속한 애들만 지원한다.
+- retained-fragment는 지원하지 않는다.
+(안드로이드 doc의에서 retain 하는 값(상태)들은 viewmodel로 이동시키라 권고한다.)
+
+
+### @Inject 
+- field injection
+- constructor injection
+
+<br>
+
+Field Injection
+```kotlin
+@AndroidEntryPoint
+class LogsFragment : Fragment() {
+
+    @Inject lateinit var logger: LoggerLocalDataSource
+    @Inject lateinit var dateFormatter: DateFormatter
+    ...
+}
+```
+- hilt가 어떻게 주입해야 하는지 알 경우 logger, dateFormatter에 객체를 주입시켜준다.
+- private접근자를 사용하면 hilt는 주입을 하지 못한다. 그러니 hilt-field-injection시 private을 사용하면 안된다.
+
+### Hilt는 언제 inject를 시켜줄까? - [여기를 보시라](https://developer.android.com/training/dependency-injection/hilt-android#component-lifetimes){:target="_blank"}
+
+<br>
+위의 객체를 주입시키려면 hilt가 어떻게 주입을 해줘야 하는지 알아야한다.
+<br><br>
+
+### 객체 생성의 경우 2가지가 있다.
+1. constructor inject할 수 있는 객체
+   - 내가 구현한 객체
+2. constructor inject할 수 없는 객체
+   - 인터페이스 or abstract class 구현체(@Module 사용)
+   - 내가 구현할 수 없는 객체(3rd party library)(@Module 사용)
+
+
+**contructor inject 할 수 있는 경우**
+
+간단하다 해당 구현 클래스에 @Inject constructor(...)를 넣어 주기만 하면 된다.
+```kotlin
+class DateFormatter @Inject constructor() {
+    ...
+}
+
+// @Singleton :알고 있는 그대로다 application-level에서 사용할 객체라는 거다(object;static)
+// 즉 모든 컴포넌트에서 사용할 수 있다.
+// logDao는 3번의 경우다.(Room) 아래서 설명한다.
+@Singleton 
+class LoggerLocalDataSource @Inject constructor(private val logDao: LogDao) 
+    :LoggerDataSource{
+        ...
+    }
+```
+이렇게 간단하게 사용하면 된다.
+
+<br> # 처음에 dagger 배울때 이 @Inject에 대해 이해가 안됐다. '어떻게 @Inject 하나로 객체를 생성하지?' 했는데 그 실질적인 구현체(generated package에)를 dagger가 만들어 주입시켜 준다는 것을 알고 이해가 됐다.
+
+**contructor inject 할 수 없는 경우**
+
+여기서부터는 모듈(@Module)이 필요하다.
+
+    hilt-module: @Module과 @InstallIn 어노테이션을 사용한 클래스
+@Module : hilt-module임을 가리킴(hilt가 알 수 있게) 
+
+@IntallIn : 어느 안드로이드 클래스(activity, fragemnt etc)를 사용할건지 가리킴(hilt가 알 수 있게)
+- dagger에 없던건데 안드로이드 컴포넌트의 생명주기(scope)에 맞게 컴포넌트를 지정하는 어노테이션이다.
+
+```kotlin
+//case 1 object,@Provides 주목 
+@InstallIn(ApplicationComponent::class)
+@Module
+object DatabaseModule {
+
+    @Provides
+    @Singleton
+    fun provideDatabase(@ApplicationContext appContext: Context): AppDatabase {
+        return Room.databaseBuilder(
+            appContext,
+            AppDatabase::class.java, "logging.db"
+        ).build()
+    }
+
+    @Provides
+    fun provideLogDao(database: AppDatabase): LogDao {
+        return database.logDao()
+    }
+}
+//case 2 abstract, @Binds주목
+@InstallIn(ActivityComponent::class)
+@Module
+abstract class LoggingInMemoryModule{
+
+    @Binds
+    abstract fun bindInMemoryLogger(impl:LoggerInMemoryDataSource):LoggerDataSource
+
+}
+```
+
+모듈 생성에서 abstract,object(static) 두 경우가 있다.
+
+- abstract class - @Binds
+  - 구현체(리턴값)가 되는 파라미터를 하나만 가질 수 있다.
+  - static이 아니기에 메모리 효율적이라 할 수 있겠다.
+  - 따로 구현이 필요 없을 경우 @Provides대신 사용한다.
+  - object가 아니기에 위의 주석처럼 scope 어노테이션이 있어야한다.
+  - 간결하다.
+- object - @Provides
+  - 구현에 필요한 파라미터를 여러개 가질 수 있다.
+  - 구현 로직을 짤 수 있다.(짜야 한다.)
+  
+
+abstract class에서 @Provides를 사용할 수 없고,<br>
+object에서 @Binds를 사용할 수 없다.
+
+
+이렇게 짝을 이룬다. 
+
+
+<br>
+
+____
+<br>
+위의 내용 정도만 알아도 기본적인 hilt는 사용할 수 있다.<br><br>
+그리고 generated (.hilt)를 둘러보면 hilt의 구현을 볼 수 있으니 한번 보면(아니 몇번) 이해의 폭이 많이 넓어지니 시도해 보시라.
+
+<br><br>
+
+### to be Continued...
