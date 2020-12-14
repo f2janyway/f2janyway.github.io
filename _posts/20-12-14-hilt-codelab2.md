@@ -36,8 +36,7 @@ date: 2020-12-14T01:15:00Z
 
 
 
-### Qualifier
-:이름 그대로 `한정자`or`지정자`다<br>
+### Qualifier(`한정자`)
 - 이 어노테이션(콸리퐈이어)이 필요한 때는 모듈 사용시 똑같은 리턴 타입이 있을 경우다.<br>
 - @Qualifier 대신 @Named로 똑깥은 기능을 할 수도 있다.(방식은 조금 다름)<br><br>
 
@@ -131,8 +130,8 @@ ___
 
 <br>
 
-### @EntryPoint
-:@AndroidEntryPoint를 사용하지 못하는 경우 사용됨
+### @EntryPoint(진입점)
+- @AndroidEntryPoint를 사용하지 못하는 경우 사용됨
 - 이 어노테이션은 hilt에서 지원하지 않는 의존성 주입에 사용된다.
 - Hilt는 안드로이드 생명주기에 특화된(보일러플레이트코드를 줄여주는) DI라고 생각해도 되겠다. 그러니 안드로이드 생명주기와 상관없는 단순 feature module같은 경우는 hilt가 아닌 dagger을 이용해야한다. <br>
 (일반 클래스에서 hilt가 @Inject를 찾질 못한다.이런 경우 @EntryPoint가 필요하다.)
