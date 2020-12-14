@@ -1,7 +1,7 @@
 ---
 layout: posts
 # published: false
-title: "안드로이드 Hilt 개념 설명"
+title: "안드로이드 Hilt 개념 설명 및 사용법[1]"
 comments: true
 # pagination:
 #     enabled: true
@@ -22,8 +22,8 @@ date: 2020-12-12T01:15:00Z
   2. Container(Hilt-componet)
   3. @Inject
   4. module(@Binds,@Provids)
-  5. Qualifier(다음글)
-  6. @EntryPoint(다음글)
+  5. Qualifier([다음글]({% post_url 20-12-14-hilt-codelab2 %}))
+  6. @EntryPoint([다음글]({% post_url 20-12-14-hilt-codelab2 %}))
 
 
 ### Hilt란
@@ -57,9 +57,9 @@ ____
 ### Container(as hilt-component) 
 `android-doc에서 두 단어(container-(hilt)component)를 혼용해서 사용함(전부는 아님)`
 
-우리가 알고 있는 컨테이너의 개념을 생각하면 '화물 컨테이너'가 떠오른다. 무언가를 담는 공간인데 이 기본적인 개념과 같이 hilt의 container 역시 각 의존성(instance;객체)(들)을 *가지고* 또 필요한 곳에 생명주기를 고려하며 의존성 주입을 하는 기능을 가진다.
+우리가 알고 있는 컨테이너의 개념을 생각하면 '화물 컨테이너'가 떠오른다. 무언가를 담는 공간인데 이 기본적인 개념과 같이 hilt의 container 역시 각 의존성(들)을 *가지고* 또 필요한 곳에 생명주기를 고려하며 의존성 주입을 하는 기능을 가진다.
 
-(*가지고* 라는 말은 각 객체를 어떻게 만드는지 알고 있다는 의미가 포함된다.) 
+(*가지고* 라는 말은 각 의존성을 어떻게 만드는지 알고 있다는 의미가 포함된다.) 
 
 <br>
 
@@ -78,12 +78,12 @@ ____
 
 @AndroidEntryPoint는 각 안드로이드 클래스의 컴포넌트를 생성한다.
 
-    `컴포넌트`는 각 컴포넌트 안에서 해당 주소(안드로이드 클래스)에만 보낼 수 있는 객체들의 장소라고 볼 수 있다.
+    `컴포넌트`는 각 컴포넌트 안에서 해당 주소(안드로이드 클래스)에만 보낼 수 있는 의존성들의 장소라고 볼 수 있다.
 
     택배사로 비유를 하자면(물리적인 비유)
     
     컴포넌트(컨테이너) - 서울시 관할 물류센터
-    객체(의존성)      - 물류들 
+    의존성      - 물류들 
 
     생명주기까지 접목시켜 보자면 
     '해당 범위(scope;아래서 설명)에서 할일이 끝났다.'는 해당 지역구에 발송 물류가 없다면 그 컴포넌트의 역할은 끝난것이다.(휴가랄까...)
@@ -114,21 +114,21 @@ class LogsFragment : Fragment() {
     ...
 }
 ```
-- hilt가 어떻게 주입해야 하는지 알 경우 logger, dateFormatter에 객체를 주입시켜준다.
+- hilt가 어떻게 주입해야 하는지 알 경우 logger, dateFormatter에 의존성을 주입시켜준다.
 - private접근자를 사용하면 hilt는 주입을 하지 못한다. 그러니 hilt-field-injection시 private을 사용하면 안된다.
 
 ### Hilt는 언제 inject를 시켜줄까? - [여기를 보시라](https://developer.android.com/training/dependency-injection/hilt-android#component-lifetimes){:target="_blank"}
 
 <br>
-위의 객체를 주입시키려면 hilt가 어떻게 주입을 해줘야 하는지 알아야한다.
+위의 의존성를 주입시키려면 hilt가 어떻게 주입을 해줘야 하는지 알아야한다.
 <br><br>
 
-### 객체 생성의 경우 2가지가 있다.
-1. constructor inject할 수 있는 객체
-   - 내가 구현한 객체
-2. constructor inject할 수 없는 객체
+### 의존성 생성의 경우 2가지가 있다.
+1. constructor inject할 수 있는 클래스
+   - 내가 구현한 클래스
+2. constructor inject할 수 없는 클래스
    - 인터페이스 or abstract class 구현체(@Module 사용)
-   - 내가 구현할 수 없는 객체(3rd party library)(@Module 사용)
+   - 내가 구현할 수 없는 클래스(3rd party library)(@Module 사용)
 
 
 **contructor inject 할 수 있는 경우**
@@ -139,7 +139,7 @@ class DateFormatter @Inject constructor() {
     ...
 }
 
-// @Singleton :알고 있는 그대로다 application-level에서 사용할 객체라는 거다(object;static)
+// @Singleton :알고 있는 그대로다 application-level에서 사용할 클래스라는 거다(object;static)
 // 즉 모든 컴포넌트에서 사용할 수 있다.
 // logDao는 3번의 경우다.(Room) 아래서 설명한다.
 @Singleton 
@@ -150,7 +150,7 @@ class LoggerLocalDataSource @Inject constructor(private val logDao: LogDao)
 ```
 이렇게 간단하게 사용하면 된다.
 
-<br> # 처음에 dagger 배울때 이 @Inject에 대해 이해가 안됐다. '어떻게 @Inject 하나로 객체를 생성하지?' 했는데 그 실질적인 구현체(generated package에)를 dagger가 만들어 주입시켜 준다는 것을 알고 이해가 됐다.
+<br> # 처음에 dagger 배울때 이 @Inject에 대해 이해가 안됐다. '어떻게 @Inject 하나로 의존성 주입을 생성하지?' 했는데 그 실질적인 구현체(generated package에)를 dagger가 만들어 주입시켜 준다는 것을 알고 이해가 됐다.
 
 **contructor inject 할 수 없는 경우**
 
