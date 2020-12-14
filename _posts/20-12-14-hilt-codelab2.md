@@ -19,26 +19,30 @@ date: 2020-12-14T01:15:00Z
 
 
 - Container : 안드로이드 컴포넌트(클래스)들의 생명 주기를 고려한 hilt-component로 지정을 할 수 가 있다. 이 안에서 각 의존성들이 생성되고 필요한 곳에 주입을 시켜준다.
-- @AndroidEntryPoint : hilt가 의존성 주입을 어디(어느 클래스인지를)에 해야하는지 먼저 알아야 하는데 이 @AndroidEntryPoint가 그 역할을 해준다. dagger에는 없던 어노테이션인데 이는 안드로이드 컴포넌트의 생명주기를 고려해 의존성 주입을 하기 위해 hilt에서 생긴 것이다.
-  - 안드로이드 컴포넌트가 아닌 클래스에 주입할 때는 필요없다.
+- @AndroidEntryPoint : hilt가 의존성 주입을 어디(어느 클래스에)에 해야하는지 먼저 알아야 하는데 이 @AndroidEntryPoint가 그 역할을 해준다. dagger에는 없던 어노테이션인데 이는 안드로이드 컴포넌트의 생명주기를 고려해 의존성 주입을 하기 위해 hilt에서 생긴 것이다.
 - @Inject : field-injection, constructor-injection 두가지가 있다.
   - 이 어노터에션이 붙은 변수(필드) 또는 생성자 파라미터에 의존성을 주입한다.
 - 모듈(@Module) : constructor-injection 할 수 없는 경우에 사용(추상 클래수,인터페이스, 외부 라이브러리)
   - @Binds : 리턴 타입이 인터페이스(추상 클래스)일 경우
     - 모듈 클래스가 abstract일 때(즉 주입 메서드도 abstract)
-    - 파라미터가 한개만 가능
+    - 파라미터 한개만 가능
   - @Provide : 의존성이 외부라이브러리 클래스일 경우
     - 모듈 클래스가 object(static)일 때
     - 여러 파라미터 가능
+    - function body 존재
   - @Binds나 @Provides에서 Hilt가 필요한 건 리턴 타입과 파라미터들 뿐이다.(이름은 그냥 적당히 지으면 된다. 보통 fun provide~ , fun bind~)
-- @InstallIn(~) : 모듈을 사용할 때 어느 안드로이드 컴포넌트를 사용할 건지 지정     
+  - @Binds, @Provides는 서로 각각 다른 기능을 하는 건 아니다.@Provides로 @Binds의 기능을 구현할 수 있지만 효율적(runtime 생성,코드 간결함)으로 하기 위해 사용하는 용도가 @Binds다. 하지만 @Binds로 @Provides의 기능을 모두 구현할 수는 없다.(라고 이해하고 있음)
+- @InstallIn(~) : 모듈을 사용할 때 어느 안드로이드 컴포넌트에 맞춰 사용할 건지 지정     
 
 
 
 ### Qualifier
 :이름 그대로 `한정자`or`지정자`다<br>
-이 어노테이션(콸리퐈이어)이 필요한 때는 모듈 사용시 똑같은 타입의 의존성들이 있을때다.<br>
-예를 들면 Car를 상속해 각각 기름 종류에 따라 의존성이 필요할 경우를 보면
+- 이 어노테이션(콸리퐈이어)이 필요한 때는 모듈 사용시 똑같은 리턴 타입이 있을 경우다.<br>
+- @Qualifier 대신 @Named로 똑깥은 기능을 할 수도 있다.(방식은 조금 다름)<br><br>
+
+### ex
+Car를 상속해 각각 기름 종류에 따라 자동차가 필요할 경우를 보면
 ```kotlin
 enum class OilType{
     GASOLINE,DIESEL,LPG
@@ -129,9 +133,9 @@ ___
 
 ### @EntryPoint
 :@AndroidEntryPoint를 사용하지 못하는 경우 사용됨
-이 어노테이션은 hilt에서 지원하지 않는 의존성 주입에 사용된다.<br>
-Hilt는 안드로이드 생명주기에 특화된(보일러플레이트코드를 줄여주는) DI라고 생각해도 되겠다. 그러니 안드로이드 생명주기와 상관없는 단순 feature module같은 경우는 hilt가 아닌 dagger을 이용해야한다. <br>
-(일반 클래스에서 @Inject를 그냥 사용할 수 없다.이런 경우 @EntryPoint가 필요하다.)
+- 이 어노테이션은 hilt에서 지원하지 않는 의존성 주입에 사용된다.
+- Hilt는 안드로이드 생명주기에 특화된(보일러플레이트코드를 줄여주는) DI라고 생각해도 되겠다. 그러니 안드로이드 생명주기와 상관없는 단순 feature module같은 경우는 hilt가 아닌 dagger을 이용해야한다. <br>
+(일반 클래스에서 hilt가 @Inject를 찾질 못한다.이런 경우 @EntryPoint가 필요하다.)
 <br>
 
 이 Car함수에서 local db를 사용한다고 가정하면 요론 식으로 사용할 수 있겠다.
@@ -195,8 +199,9 @@ ____
 
 <br>
 
-android-doc : https://developer.android.com/training/dependency-injection <br>
-android-hilt-codelab : https://codelabs.developers.google.com/codelabs/android-hilt#0
+## 더 자세한 공부는 여기서 <br>
+[android-doc-link](https://developer.android.com/training/dependency-injection) <br>
+[android-hilt-codelab-link](https://codelabs.developers.google.com/codelabs/android-hilt#0)
 
 
 
