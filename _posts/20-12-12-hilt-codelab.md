@@ -28,13 +28,15 @@ date: 2020-12-12T01:15:00Z
 
 ### Hilt란
 
-hilt는 안드로이드 클래스에 생명주기를 고려한 의존성 주입을 할 수 있는 라이브러리다. 또한 테스트하기 쉽고 보일러플레이트코드를 줄여준다.
+: `안드로이드를 위한 의존성 주입` 라이브러리 <br>
+hilt는 안드로이드 클래스에 생명주기를 고려한 의존성 주입을 할 수 있는 라이브러리다. 또한 dagger을 쓰면 구현해야하는 여러 보일러-플레이트-코드를 줄여준다.
 
 기존의 dagger라는 의존성 주입 라이브러리가 있었으나 dagger에서 안드로이드의 생명주기를 고려하는 의존성 주입은 없어서 따로 구현을 해야 했다.
 
 hilt는 이를 보완해 나온것이다.(hilt는 dagger을 포함하고 있다.)
 
 DI(Dependency Injection)의 필요성에 대한 설명은 [여기](https://developer.android.com/training/dependency-injection#fundamentals){:target="_blank"}에 상세히 나와있다.
+
 
 <br>
 
