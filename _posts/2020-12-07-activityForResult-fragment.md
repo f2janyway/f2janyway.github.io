@@ -21,7 +21,7 @@ activity 에서 startActivityForResult를 할 경우는 직관적으로 해당 a
 
 정석적으로는 fragment에서 받아주는게 맞다. 그러나 activity에서도 처리를 할 수 있긴하다.
 
-### test requestCode는 111
+#### test requestCode는 111
 
 logcat을 보면   
 

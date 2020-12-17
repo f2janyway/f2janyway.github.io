@@ -42,7 +42,7 @@ date: 2020-12-14T01:15:00Z
 
 <br><br>
 
-### ex
+**ex**
 Car를 상속해 각각 기름 종류에 따라 자동차가 필요할 경우를 보면
 ```kotlin
 enum class OilType{
@@ -94,7 +94,9 @@ fun bindDieselCar(impl:DieselCar):Car
 이렇게 사용하면 된다.
 <br><br>
 그리고 @Provides를 사용할때도 똑같다. 리턴 타입은 동일하나 파라미터가 다른 경우가 있겠다.
-<br> ex)
+<br> 
+
+**ex**
 
 ```kotlin
 @InstallIn(ApplicationComponent::class)
@@ -187,7 +189,7 @@ dagger의 component, subComponent, Builder, Factory 등등에 대한 좋은 정�
 
 <br>
 
-## `Hilt를 익혀봤으니 이제는 써보자!!!`
+**`Hilt를 익혀봤으니 이제는 써보자!!!`**
 
 <br>
 
@@ -200,7 +202,7 @@ ____
 
 <br>
 
-## 더 자세한 공부는 여기서 <br>
+**더 자세한 공부는 여기서** <br>
 [android-doc-link](https://developer.android.com/training/dependency-injection) <br>
 [android-hilt-codelab-link](https://codelabs.developers.google.com/codelabs/android-hilt#0)
 

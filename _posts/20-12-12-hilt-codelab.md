@@ -66,7 +66,7 @@ ____
 <br>
 
 
-**@AndroidEntryPoint([component-scope](https://developer.android.com/training/dependency-injection/hilt-android#component-scopes){:target="_blank"})**
+### @AndroidEntryPoint([component-scope](https://developer.android.com/training/dependency-injection/hilt-android#component-scopes){:target="_blank"})
 
 직역하면 `안드로이드-진입점`이다. 이 어노테이션이 있는 안드로이드 클래스에 hilt가 의존성 주입을 할 수 있게된다.
 
@@ -122,7 +122,7 @@ class LogsFragment : Fragment() {
 위의 의존성를 주입시키려면 hilt가 어떻게 주입을 해줘야 하는지 알아야한다.
 <br><br>
 
-### 의존성 주입 방식에 2가지 경우가 있다.
+**의존성 주입 방식에 2가지 경우가 있다.**
 1. constructor inject할 수 있는 클래스
    - 내가 구현한 클래스
 2. constructor inject할 수 없는 클래스
@@ -221,4 +221,4 @@ ____
 
 <br><br>
 
-### to be Continued...
+**to be Continued...**
