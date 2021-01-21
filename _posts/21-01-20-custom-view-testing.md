@@ -140,7 +140,7 @@ circleProgress.setPercent(timePercent)
 ```
 setPercent(), percentToAngle(), sweepAngle 순서대로 보면
 
-## setPercent()
+### setPercent()
 ```kotlin
 fun setPercent(percentFloat: Float) {
     mPaint.apply {
@@ -154,7 +154,7 @@ fun setPercent(percentFloat: Float) {
     invalidate()
 }
 ```
-## percentToAngle()
+### percentToAngle()
 ```kotlin
 private fun percentToAngle(percentFloat: Float): Float {
     return if (percentFloat in 0.0 .. 1.0) {
@@ -176,7 +176,7 @@ private fun percentToAngle(percentFloat: Float): Float {
 }
 
 ```
-## sweepAngle
+### sweepAngle
 ```kotlin
 private val sweepAngle: Float
     get() = when {
