@@ -18,6 +18,7 @@ date: 2021-01-20T01:15:00Z
 
 [개인 프로젝트(타이머)](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko&gl=US){:target="_blank"}를 하면서 간단한 circleProgress가 필요했다. 이럴 용도로 [초라한 라이브러리](https://github.com/f2janyway/custom_view){:target="_blank"} 를 만들었지만 변경할게 많아 그냥 파일 복붙만 해서 사용했다.
 
+![멀티타이머_progress](https://user-images.githubusercontent.com/55625423/105281830-55852580-5bf0-11eb-8994-2d537727f804.gif)
 
 <br>
 
