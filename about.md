@@ -27,8 +27,7 @@ title: "About Me"
 
 3. 2019-12: [멀티타이머](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko) 
     - coroutine 공부를 위해
-    - 진짜 시간 나면 재개발 해야함(Rx or corouine)
-    - customview 공부 필
+    - 2020-1-20 재개발 완성
 
 4. 2019-10 ~ : [국한문성경앱](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 
     - 4천만(2020-10기준)
