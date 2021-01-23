@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "fragment의 startActivityForResult() 고찰"
+title: "[안드로이드]fragment의 startActivityForResult() 고찰"
 comments: true
 # pagination:
 #     enabled: true

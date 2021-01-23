@@ -1,7 +1,7 @@
 ---
 layout: posts
 # published: false
-title: "안드로이드 Hilt 개념 설명 및 사용법[1]"
+title: "[안드로이드] Hilt 개념 설명 및 사용법[1]"
 comments: true
 # pagination:
 #     enabled: true
