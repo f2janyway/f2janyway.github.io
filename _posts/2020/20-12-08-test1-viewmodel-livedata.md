@@ -1,5 +1,5 @@
 ---
-layout: posts
+
 # published: false
 title: "[안드로이드] ViewModel,LiveData 테스트하기"
 comments: true

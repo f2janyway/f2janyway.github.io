@@ -1,7 +1,6 @@
 ---
 # published: false
 
-layout: posts
 title: "[안드로이드] Robolectric 실전 테스트"
 comments: true
 # pagination:

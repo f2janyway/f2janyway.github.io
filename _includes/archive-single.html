@@ -25,7 +25,7 @@
       {% endif %}
     </h2>
     {{post.date|date_to_string}}
-    {% if post.read_time %} 
+    {% if post.date %} 
       <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}

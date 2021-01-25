@@ -219,7 +219,7 @@ If you're not using the `jekyll-archives` plugin then you need to create archive
 
 | Name                 | Layout | Example |
 | -------------------- | ------ | ------ |
-| [Posts Archive](https://mmistakes.github.io/minimal-mistakes/year-archive/) | `layout: posts` | [year-archive.md](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/year-archive.md) |
+| [Posts Archive](https://mmistakes.github.io/minimal-mistakes/year-archive/) | `` | [year-archive.md](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/year-archive.md) |
 | [Categories Archive](https://mmistakes.github.io/minimal-mistakes/categories/) | `layout: categories` | [category-archive.md](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/category-archive.md) |
 | [Category Archive](https://mmistakes.github.io/minimal-mistakes/categories/edge-case/) | `layout: category` | [edge-case.md](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/edge-case.md) |
 | [Tags Archive](https://mmistakes.github.io/minimal-mistakes/tags/) | `layout: tags` | [tag-archive.md](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/tag-archive.md) |
@@ -229,7 +229,7 @@ If you're not using the `jekyll-archives` plugin then you need to create archive
 **Note:** By default, documents are shown in a list view. To change to a grid view add `entries_layout: grid` to the page's front matter.
 {: .notice--info}
 
-### `layout: posts`
+### ``
 
 This layout displays all posts grouped by the year they were published. It accommodates the same front matter as `layout: archive`.
 

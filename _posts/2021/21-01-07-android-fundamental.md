@@ -1,5 +1,5 @@
 ---
-layout: posts
+
 published: false
 title: "안드로이드 구조를 이해해보자!"
 comments: true

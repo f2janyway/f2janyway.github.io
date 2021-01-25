@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "Retrofit2에서 suspend func 사용시 CustomCallAdapter을 이용해 응답을 처리하는 방법"
 comments: true
 categories:
@@ -156,8 +155,10 @@ ___
 
 - in, out 은 제네릭을 사용할 때 쓰인다.
 - \<in T> 와 \<out T>는 반대 기능을 한다고 생각하자.(당연하지만)
-- \<in T> 은 T 안(하위계층)의 class들만(T포함) 가질 수 있다.
-- \<out T> 은 T 밖(상위계층)의 class들만(T포함) 가질 수 있다.
+- \<in T> 은 T의 상위 클래스를 가질 수 있다.
+  - 마치 `Min is T` 라고 보면 될 것 같다.
+- \<out T> 은 T의 하위 클래스를 가질 수 있다.
+  - 마치 `Max is T` 라고 보면 될 것 같다.
 
 ```kotlin
 class Home<in T>
@@ -166,7 +167,7 @@ class Child():Parent()
 
 fun main(){
     val parentHome: Home<Parent> = Home<Child>() << compile error
-    val childHome:Home<Child> = Home<Parent>() << OK
+    val childHome: Home<Child> = Home<Parent>() << OK
 }
 ```
 
@@ -177,7 +178,7 @@ class Child():Parent()
 
 fun main(){
     val parentHome: Home<Parent> = Home<Child>() << OK
-    val childHome:Home<Child> = Home<Parent>() << compile error
+    val childHome: Home<Child> = Home<Parent>() << compile error
 }
 ```
 ___

@@ -1,5 +1,5 @@
 ---
-layout: posts
+
 published: false
 title: "[안드로이드 테스트(1)] 테스트 명명법 및 코드순서"
 comments: true

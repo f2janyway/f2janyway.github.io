@@ -1,5 +1,5 @@
 ---
-layout: posts
+
 title: "[안드로이드] 테스트 dependencies 리스트"
 comments: true
 # pagination:

@@ -1,5 +1,5 @@
 ---
-layout: posts
+
 title: "[안드로이드] fragment의 startActivityForResult() 고찰"
 comments: true
 # pagination:

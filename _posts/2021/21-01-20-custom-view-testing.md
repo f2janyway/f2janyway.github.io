@@ -1,5 +1,5 @@
 ---
-layout: posts
+
 # published: false
 title: "[안드로이드] CustomView 테스트하기(private 접근)"
 comments: true

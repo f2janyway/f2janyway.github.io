@@ -3,7 +3,7 @@ layout: archive
 permalink: /about/
 title: "About Me"
 ---
-안드로이드 개발자(Android Developer)이자 본래 하나님 믿는 사람
+나그네 개발자; f2janyway
 
 ### 관심사 in dev
 - clean code
@@ -47,11 +47,13 @@ title: "About Me"
 
 
 <br>
-### Email: f2janyway@gmail.com
+<br>
 
 ```
  Thou shalt love thy neighbour as thyself.
  -Matthew 22:39
 ```
+
+
 
 
