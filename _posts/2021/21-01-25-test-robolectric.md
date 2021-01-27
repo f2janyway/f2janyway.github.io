@@ -46,7 +46,7 @@ assert는 Truth라이브러리를 사용했습니다.
 
 여러 클래스 테스트를 할 경우 매번 이 @Config를 설정하는게 귀찮은 작업이 되는데 그럴 경우 app/src/test/resources 로 디렉토리를 만들어 resources안에 아래와 같이 간단한 파일을 만들면 모든 (local)테스트에서 @Config 사용 없이 Robolectric 사용이 가능합니다.
 
-resources/robolectric.properties
+### resources/robolectric.properties
 
     sdk=28
 

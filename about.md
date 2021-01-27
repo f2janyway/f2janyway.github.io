@@ -3,6 +3,8 @@ layout: archive
 permalink: /about/
 title: "About Me"
 ---
+
+
 나그네 개발자; f2janyway
 
 ### 관심사 in dev
