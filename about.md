@@ -17,31 +17,46 @@ title: "About Me"
 - Kotlin
 
 
-### 이력(History)
-1. 2020-06 ~ : [현대오일뱅크,si 업무](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)
-    - 안드로이드(클라이언트) 혼자 개발
-    - 리뷰를 보면 마음이 아픔
+### 이력(History) 
+    이미지를 누르면 링크로 이동
 
-2. 2020-9 : [새찬송가](https://play.google.com/store/apps/details?id=com.box.hymn&hl=es_NI)
-    - 사용자 매우 적음
-    - 개발 시간 하루
-    - 코드 나름 깔끔
+<br>
 
-3. 2019-12: [멀티타이머](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko) 
-    - coroutine 공부를 위해
-    - 2020-1-20 재개발 완성
+[![image](https://user-images.githubusercontent.com/55625423/106105029-a6fc5a00-6186-11eb-96ec-ab05c9881e5a.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)  2020.06~2020.11 : 현대오일뱅크 안드로이드 앱  
+- 안드로이드(클라이언트) 혼자 개발
 
-4. 2019-10 ~ : [국한문성경앱](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 
-    - 4천만(2020-10기준)
-    - 처음으로 만든 앱
-    - 보일러플레이트 코드 너무 많다.
-    - 한다 한다 해 놓고 아직도 리팩토링 안하고 있음.
-    - 그래도 유용한 앱
+___
 
-5. 2019-6~9 : [국비과정 웹 프로젝트(로컬서버)](https://github.com/yegyu/DotNet)
-    - 추억이 새록 새록
-    - 유일한 진짜 팀프로젝트
+
+[![image](https://user-images.githubusercontent.com/55625423/106109316-bbdbec00-618c-11eb-8597-c902ebc65135.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 2019.10 ~ : 국한문성경앱
+- 첫 개발기간 : 2주
+- 4천만(2020-10기준)
+- 처음으로 만든 앱
+
+
+___ 
+
+[![image](https://user-images.githubusercontent.com/55625423/106109559-08272c00-618d-11eb-8e73-561e76845eff.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko)2019.12: 멀티타이머
+- 개발 기간 : 2주
+- 2020-1-20 재개발 완성
+
+___
+
+[![image](https://user-images.githubusercontent.com/55625423/106109185-8fc06b00-618c-11eb-97e4-b917caeab559.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.hymn&hl=ko) 2020.09 : 새찬송가
+- 개발 기간 : 하루
+
+___
+
+
+
+
+
+
+[![image](https://user-images.githubusercontent.com/55625423/106109942-723fd100-618d-11eb-9b28-7e94ff794e57.png){: width="100" height="100"}](https://github.com/yegyu/DotNet)
+2019.06~2019.09 : 국비과정 웹 프로젝트
+- 팀프로젝트
                 
+___
     
 
 [custom-view-library](https://github.com/f2janyway/custom_view)
