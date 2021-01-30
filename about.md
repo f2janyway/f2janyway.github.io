@@ -28,8 +28,8 @@ title: "About Me"
 ___
 
 
-[![image](https://user-images.githubusercontent.com/55625423/106109316-bbdbec00-618c-11eb-8597-c902ebc65135.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 2019.10 ~ : 국한문성경앱
-- 첫 개발기간 : 2주
+[![image](https://user-images.githubusercontent.com/55625423/106109316-bbdbec00-618c-11eb-8597-c902ebc65135.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 2019.9 ~ : 국한문성경앱
+- 첫 개발기간 : 1주
 - 4천만(2020-10기준)
 - 처음으로 만든 앱
 
@@ -37,7 +37,7 @@ ___
 ___ 
 
 [![image](https://user-images.githubusercontent.com/55625423/106109559-08272c00-618d-11eb-8e73-561e76845eff.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko)2019.12: 멀티타이머
-- 개발 기간 : 2주
+- 개발 기간 : 1주
 - 2020-1-20 재개발 완성
 
 ___
