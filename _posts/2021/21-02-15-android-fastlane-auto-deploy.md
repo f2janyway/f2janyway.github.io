@@ -1,5 +1,5 @@
 ---
-title: 안드로이드 자동화 배포 경험기
+title: 안드로이드 자동화 배포 경험기 [Window10]
 categories: 
     - android
     - fastlane
