@@ -38,13 +38,13 @@ build.gradle에서 각자 사용하는 형태에 맞게 versioning등을 변경�
 // versionCode만 1 증가
 gradlew versionUp
 
-//  versionCode, "0.0.0" -> "1.0.0"
+//  versionCode++, versionName "0.0.0" -> "1.0.0"
 gradlew versionUp --versioning="major"
 
-// versionCode, "0.0.0" -> "0.1.0"
+// versionCode++, versionName "0.0.0" -> "0.1.0"
 gradlew versionUp --versioning="minor"
 
-// versionCode, "0.0.0" -> "0.0.1"
+// versionCode++, versionName "0.0.0" -> "0.0.1"
 gradlew versionUp --versioning="patch"
 
 ```
