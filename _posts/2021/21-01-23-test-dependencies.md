@@ -12,8 +12,11 @@ tags:
 date: 2021-01-23T00:15:00Z
 ---
 
-(좋은 정보는 여기서) ->
-AndroidX test setUp [link](https://developer.android.com/training/testing/set-up-project#gradle-dependencies) 
+
+- [AndroidX test setUp (Instrument test)](https://developer.android.com/training/testing/set-up-project#gradle-dependencies) 
+
+- [viewModel, repository, dataSource, fragment testing dependencies codelab](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles?hl=ko#7)
+
 ### test(local)
 - testImplementation 'androidx.test:core-ktx:$core_ktx_version'
 - testImplementation 'androidx.test.ext:junit-ktx:$junit_ktx_version'
