@@ -19,7 +19,9 @@ date: 2021-01-23T00:15:00Z
 
 ### test(local)
 - testImplementation 'androidx.test:core-ktx:$core_ktx_version'
+
 - testImplementation 'androidx.test.ext:junit-ktx:$junit_ktx_version'
+    - AndroidJUnit4
 - testImplementation 'androidx.arch.core:core-testing:$arch_core_testing_version'
 - testImplementation 'androidx.room:room-testing:$room_version'
 - testImplementation 'org.hamcrest:hamcrest-all:$hamcrest_version'
