@@ -12,6 +12,8 @@ tags:
 date: 2021-01-23T00:15:00Z
 ---
 
+(좋은 정보는 여기서) ->
+AndroidX test setUp [link](https://developer.android.com/training/testing/set-up-project#gradle-dependencies) 
 ### test(local)
 - testImplementation 'androidx.test:core-ktx:$core_ktx_version'
 - testImplementation 'androidx.test.ext:junit-ktx:$junit_ktx_version'
