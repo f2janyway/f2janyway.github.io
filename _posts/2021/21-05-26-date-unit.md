@@ -1,7 +1,6 @@
 ---
 title: UTC, GMT, KST 표시
-categories: 
-tags:
+
    
 ---
 javascript가 편하게 알려준다.
