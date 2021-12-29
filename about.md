@@ -12,6 +12,8 @@ title: "About Me"
 [![image](https://play-lh.googleusercontent.com/qkbrIh-QBjYCGkidauZpIF2_KRC3Lau1ZErEAL1xkhXsA6XGR--tiJeSSHzAB4LWuzw=w240-h480-rw){: width="100" height="100"}](https://play.google.com/store/apps/details?id=brace.formation) 2021.04~현재
 - 안드로이드 50% 외주개발된 상태에서 이어서 개발 및 유지보수
 
+___
+
 [![image](https://user-images.githubusercontent.com/55625423/106105029-a6fc5a00-6186-11eb-96ec-ab05c9881e5a.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)  2020.06~2020.11 : 현대오일뱅크 안드로이드 앱  
 - 안드로이드(클라이언트) 혼자 개발
 
