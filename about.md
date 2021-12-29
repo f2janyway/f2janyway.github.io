@@ -22,7 +22,6 @@ ___
 
 [![image](https://user-images.githubusercontent.com/55625423/106109316-bbdbec00-618c-11eb-8597-c902ebc65135.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 2019.9 ~ : 국한문성경앱
 - 첫 개발기간 : 1주
-- 4천만(2020-10기준)
 - 처음으로 만든 앱
 
 
