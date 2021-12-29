@@ -4,23 +4,13 @@ permalink: /about/
 title: "About Me"
 ---
 
-
-나그네 개발자; f2janyway
-
-### 관심사 in dev
-- clean code
-  - 훈련! 훈련! 훈련!
-- 테스팅
-  - 훈련! 훈련! 훈련!
-  - 포기하지 말자.
-- 안드로이드
-- Kotlin
-
-
-### 이력(History) 
+### 프로젝트
     이미지를 누르면 링크로 이동
 
 <br>
+
+[![image](https://play-lh.googleusercontent.com/qkbrIh-QBjYCGkidauZpIF2_KRC3Lau1ZErEAL1xkhXsA6XGR--tiJeSSHzAB4LWuzw=w240-h480-rw){: width="100" height="100"}](https://play.google.com/store/apps/details?id=brace.formation) 2021.04~현재
+- 안드로이드 50% 외주개발된 상태에서 이어서 개발 및 유지보수
 
 [![image](https://user-images.githubusercontent.com/55625423/106105029-a6fc5a00-6186-11eb-96ec-ab05c9881e5a.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)  2020.06~2020.11 : 현대오일뱅크 안드로이드 앱  
 - 안드로이드(클라이언트) 혼자 개발
@@ -35,7 +25,6 @@ ___
 
 
 ___ 
-
 [![image](https://user-images.githubusercontent.com/55625423/106109559-08272c00-618d-11eb-8e73-561e76845eff.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko)2019.12: 멀티타이머
 - 개발 기간 : 1주
 - 2020-1-20 재개발 완성
