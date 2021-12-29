@@ -10,12 +10,13 @@ title: "About Me"
 <br>
 
 [![image](https://play-lh.googleusercontent.com/qkbrIh-QBjYCGkidauZpIF2_KRC3Lau1ZErEAL1xkhXsA6XGR--tiJeSSHzAB4LWuzw=w240-h480-rw){: width="100" height="100"}](https://play.google.com/store/apps/details?id=brace.formation) 2021.04~현재
+- 축구용품 및 레플리카 중고거래 , 축구경기,동호회 관련 앱 (한마디로 축구관련앱)
 - 안드로이드 50% 외주개발된 상태에서 이어서 개발 및 유지보수
 
 ___
 
 [![image](https://user-images.githubusercontent.com/55625423/106105029-a6fc5a00-6186-11eb-96ec-ab05c9881e5a.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.hyundaioilbank.android&hl=ko)  2020.06~2020.11 : 현대오일뱅크 안드로이드 앱  
-- 안드로이드(클라이언트) 혼자 개발
+- 오일뱅크 앱 리뉴얼로 안드로이드 앱(Kotlin)을 혼자 개발
 
 ___
 
@@ -23,9 +24,10 @@ ___
 [![image](https://user-images.githubusercontent.com/55625423/106109316-bbdbec00-618c-11eb-8597-c902ebc65135.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.bible&hl=ko) 2019.9 ~ : 국한문성경앱
 - 처음으로 만든 앱
 - 매우 열정적이었음
+- 간간히 리팩토링 중
 
+___
 
-___ 
 [![image](https://user-images.githubusercontent.com/55625423/106109559-08272c00-618d-11eb-8e73-561e76845eff.png){: width="100" height="100"}](https://play.google.com/store/apps/details?id=com.box.firecast&hl=ko)2019.12: 멀티타이머
 - 개발 계기: 구글 시계를 주로 사용하는데 타이머가 불편해서
 - 기술적 학습 목표: customView, 타이머, 사운드(알람) 구현 
@@ -37,7 +39,6 @@ ___
 ___
 
 
-
 [![image](https://user-images.githubusercontent.com/55625423/106109942-723fd100-618d-11eb-9b28-7e94ff794e57.png){: width="100" height="100"}](https://github.com/yegyu/DotNet)
 2019.06~2019.09 : 국비과정 웹 프로젝트
 - 팀프로젝트
@@ -45,13 +46,9 @@ ___
 - 재미있었음
                 
 ___
-    
 
 [custom-view-library](https://github.com/f2janyway/custom_view)
 
-
-
-<br>
 <br>
 
 ```
